@@ -39,15 +39,60 @@ const IntroScene = ({ onBack }) => {
             <p className="mb-4">
                 This chaos of isolated nodes is inefficient.
             </p>
+
             <h4 className="font-bold text-white mt-6 mb-2">The Solution: Connection</h4>
             <p className="mb-4">
-                By connecting these nodes with a physical medium (copper cables, then fiber, then radio waves), we created a <strong>Network</strong>.
+                By connecting these nodes with a physical medium (copper cables, fiber optic, or wireless signals), we created a <strong>Network</strong>.
             </p>
-            <p className="mb-4">
-                A network allows the sharing of resources (printers, storage) and information (data packets). It brings <strong>Order</strong> to the chaos.
-            </p>
-            <div className="bg-blue-900/20 border-l-2 border-blue-500 p-4 mt-6 text-xs text-blue-200">
-                <strong>Key Concept:</strong> A network is two or more computers connected for the purpose of communicating and sharing data.
+            <div className="bg-blue-900/20 border-l-2 border-blue-500 p-4 mt-4 text-xs text-blue-200">
+                <strong>Definition:</strong> A computer network is a group of connected devices that communicate with each other to share data and resources.
+            </div>
+
+            <h4 className="font-bold text-white mt-6 mb-3">📚 Basic Terminologies</h4>
+            <div className="space-y-2 text-sm">
+                <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                    <strong className="text-cyan-400">Node:</strong> Any device that can send, receive, or forward data (laptops, servers, printers, routers).
+                </div>
+                <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                    <strong className="text-cyan-400">Link:</strong> The physical or wireless medium connecting nodes (Ethernet cables, Wi-Fi, Bluetooth).
+                </div>
+                <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                    <strong className="text-cyan-400">Protocol:</strong> Rules that govern how data is sent and received (TCP/IP, HTTP, DNS).
+                </div>
+                <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                    <strong className="text-cyan-400">IP Address:</strong> Unique identifier for each device on a network (e.g., 192.168.1.1).
+                </div>
+            </div>
+
+            <h4 className="font-bold text-white mt-6 mb-3">🏗️ Network Architecture Types</h4>
+            <div className="grid grid-cols-2 gap-3 text-xs">
+                <div className="bg-purple-900/20 border border-purple-500/30 p-3 rounded-lg">
+                    <strong className="text-purple-300 block mb-1">Client-Server</strong>
+                    <p className="text-white/60">Central server manages client requests. Example: Web servers, email servers.</p>
+                </div>
+                <div className="bg-green-900/20 border border-green-500/30 p-3 rounded-lg">
+                    <strong className="text-green-300 block mb-1">Peer-to-Peer (P2P)</strong>
+                    <p className="text-white/60">No central server. Each device acts as both client and server. Example: BitTorrent.</p>
+                </div>
+            </div>
+
+            <h4 className="font-bold text-white mt-6 mb-3">🎯 Goals of Networks</h4>
+            <ul className="text-sm space-y-1 list-disc list-inside text-white/70">
+                <li><strong>Resource Sharing:</strong> Share hardware (printers, storage) efficiently</li>
+                <li><strong>Reliability:</strong> Backup systems and fault tolerance</li>
+                <li><strong>Scalability:</strong> Easy to add more devices and users</li>
+                <li><strong>Security:</strong> Protect data from unauthorized access</li>
+                <li><strong>Cost Efficiency:</strong> Reduce hardware duplication</li>
+            </ul>
+
+            <h4 className="font-bold text-white mt-6 mb-3">💡 Real-World Uses</h4>
+            <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="bg-white/5 p-2 rounded">📧 Email & Communication</div>
+                <div className="bg-white/5 p-2 rounded">🌐 Internet Access</div>
+                <div className="bg-white/5 p-2 rounded">📁 File Sharing</div>
+                <div className="bg-white/5 p-2 rounded">🎓 Online Education</div>
+                <div className="bg-white/5 p-2 rounded">🛒 E-commerce</div>
+                <div className="bg-white/5 p-2 rounded">🎮 Online Gaming</div>
             </div>
         </>
     );
@@ -139,6 +184,27 @@ const IntroScene = ({ onBack }) => {
                 <span className="text-xs text-white/40 uppercase block mb-1">Network State</span>
                 <span className={`text-xl font-mono font-bold ${networkState === 'connected' ? 'text-green-400' : 'text-red-400'}`}>
                     {networkState.toUpperCase()}
+                </span>
+            </div>
+
+            {/* Network Statistics */}
+            <div className="grid grid-cols-2 gap-3">
+                <div className="bg-white/5 p-3 rounded-lg border border-white/5">
+                    <span className="text-xs text-white/40 block mb-1">Total Nodes</span>
+                    <span className="text-lg font-bold text-cyan-400">{CHAOS_NODES.length}</span>
+                </div>
+                <div className="bg-white/5 p-3 rounded-lg border border-white/5">
+                    <span className="text-xs text-white/40 block mb-1">Connections</span>
+                    <span className="text-lg font-bold text-cyan-400">
+                        {networkState === 'connected' ? '24' : '0'}
+                    </span>
+                </div>
+            </div>
+
+            <div className="bg-white/5 p-3 rounded-lg border border-white/5">
+                <span className="text-xs text-white/40 block mb-1">Network Type</span>
+                <span className="text-sm font-bold text-white">
+                    {networkState === 'connected' ? 'LAN (Local Area Network)' : 'Isolated Nodes'}
                 </span>
             </div>
 

@@ -104,7 +104,7 @@ const UdpScene = ({ onBack }) => {
             <div className="bg-white/5 p-4 rounded-xl border border-white/10">
                 <h3 className="text-xl font-bold text-cyan-400 mb-2">TCP vs UDP</h3>
                 <p className="text-sm text-white/70">
-                    Transport Layer ke do main protocols hain. Dono ka kaam data transfer karna hai, 
+                    Transport Layer ke do main protocols hain. Dono ka kaam data transfer karna hai,
                     lekin approach bilkul alag hai.
                 </p>
             </div>
@@ -144,7 +144,7 @@ const UdpScene = ({ onBack }) => {
             </div>
 
             <div className="bg-purple-900/20 p-4 rounded text-xs text-purple-200 border border-purple-500/30">
-                <strong>Real Example:</strong> Video call mein agar 1 frame miss ho jaye, 
+                <strong>Real Example:</strong> Video call mein agar 1 frame miss ho jaye,
                 koi problem nahi (UDP). Lekin bank transaction mein har byte important hai (TCP).
             </div>
         </div>
@@ -294,7 +294,7 @@ const UdpScene = ({ onBack }) => {
                 onClick={reset}
                 className="py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all flex items-center justify-center gap-2 text-sm"
             >
-                <RefreshCcw size={14} /> Reset
+                <RefreshCw size={14} /> Reset
             </button>
 
             <div className="flex-1 bg-[#0f0f16] rounded-xl overflow-hidden border border-white/5 flex flex-col">
