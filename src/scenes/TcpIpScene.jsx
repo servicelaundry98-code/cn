@@ -63,7 +63,7 @@ const TcpIpScene = ({ onBack }) => {
 
             {/* OSI STACK (Left) */}
             <div className="flex flex-col gap-2 w-64 relative">
-                <h3 className="text-center font-bold text-white/50 mb-4">OSI MOdel (Theoretical)</h3>
+                <h3 className="text-center font-bold text-white/50 mb-4">OSI Model (Theoretical)</h3>
                 {OSI_LAYERS.map(layer => {
                     // Check if this layer is highlighted by the hover
                     const isHighlighted = hoveredTcpLayer && hoveredTcpLayer.mapsTo.includes(layer.id);

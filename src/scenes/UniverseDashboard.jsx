@@ -10,6 +10,18 @@ import DnsScene from './DnsScene';
 import IntroScene from './IntroScene';
 import SecurityScene from './SecurityScene';
 import TcpIpScene from './TcpIpScene';
+import UdpScene from './UdpScene';
+import HttpScene from './HttpScene';
+import DhcpScene from './DhcpScene';
+import SubnettingScene from './SubnettingScene';
+import Ipv6Scene from './Ipv6Scene';
+import ArpScene from './ArpScene';
+import NatScene from './NatScene';
+import IcmpScene from './IcmpScene';
+import VlanScene from './VlanScene';
+import WirelessScene from './WirelessScene';
+import CryptoScene from './CryptoScene';
+import AdvancedSecurityScene from './AdvancedSecurityScene';
 
 const UniverseDashboard = () => {
     const [selectedTopic, setSelectedTopic] = useState(null);
@@ -21,9 +33,21 @@ const UniverseDashboard = () => {
                 {selectedTopic.id === 'intro' && <IntroScene onBack={() => setSelectedTopic(null)} />}
                 {selectedTopic.id === 'osi' && <OsiVisualizerScene onBack={() => setSelectedTopic(null)} />}
                 {selectedTopic.id === 'devices' && <DevicesScene onBack={() => setSelectedTopic(null)} />}
-                {selectedTopic.id === 'tcp-udp' && <TcpHandshakeScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'tcp-handshake' && <TcpHandshakeScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'tcp-vs-udp' && <UdpScene onBack={() => setSelectedTopic(null)} />}
                 {selectedTopic.id === 'routing' && <RoutingScene onBack={() => setSelectedTopic(null)} />}
                 {selectedTopic.id === 'dns' && <DnsScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'http' && <HttpScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'dhcp' && <DhcpScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'subnetting' && <SubnettingScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'ipv6' && <Ipv6Scene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'arp' && <ArpScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'nat' && <NatScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'icmp' && <IcmpScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'vlans' && <VlanScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'wireless' && <WirelessScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'crypto' && <CryptoScene onBack={() => setSelectedTopic(null)} />}
+                {selectedTopic.id === 'advanced-security' && <AdvancedSecurityScene onBack={() => setSelectedTopic(null)} />}
                 {selectedTopic.id === 'security' && <SecurityScene onBack={() => setSelectedTopic(null)} />}
                 {selectedTopic.id === 'tcp-ip' && <TcpIpScene onBack={() => setSelectedTopic(null)} />}
             </div>
